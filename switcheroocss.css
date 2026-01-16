@@ -20,16 +20,30 @@
 /* BARRE SWITCHEROO --- */
 .switcheroo {}
 
+.switcheroo[position="static"] {
+  position: relative;
+}
 
+/* if bar on TOP */
+.switcheroo[position="top"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
 /* if bar on BOT */
 .switcheroo[position="bottom"] {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 100;
 }
 
+/* HORIZONTAL bar */
+.switcheroo[direction="horizontal"] {
+  width: 100%;
+}
 
 /* VERTICAL bar */
 .switcheroo[direction="vertical"] {
