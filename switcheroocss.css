@@ -18,7 +18,22 @@
 }
 
 /* BARRE SWITCHEROO --- */
-.switcheroo {}
+.contswitch {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  user-select: none;
+}
+
+/* Optional hover effect */
+.contswitch:hover {
+  background-color: #e0e0e0;
+}
+
+    
+    .switcheroo {}
 
 .switcheroo[position="static"] {
   position: relative;
