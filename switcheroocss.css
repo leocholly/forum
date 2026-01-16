@@ -115,11 +115,12 @@
 /* Circles display */
 .switcheroo__squircles {
   display: flex;
+  flex-direction:column;
   margin: 0;
   padding: 0;
   list-style: none;
-  padding: var(--gap-size);
-  gap: var(--gap-size);
+  padding: 0.1rem;
+  gap: 0.5rem;
 }
 .switcheroo[direction="horizontal"] .switcheroo__squircles {
   flex-direction: row;
