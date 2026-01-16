@@ -33,7 +33,7 @@
   user-select: none;
   position: fixed;
   top: 0.75rem;
-  left: 2rem;
+  right: 2rem;
   font-weight: bold;
   z-index: 1000;
   color:var(--accentclr);
