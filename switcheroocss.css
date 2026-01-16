@@ -40,10 +40,6 @@
   z-index: 100;
 }
 
-/* HORIZONTAL bar */
-.switcheroo[direction="horizontal"] {
-  width: 100%;
-}
 
 /* VERTICAL bar */
 .switcheroo[direction="vertical"] {
