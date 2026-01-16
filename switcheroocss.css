@@ -25,11 +25,22 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   user-select: none;
+  position:fixed;
+  top:4rem;
+  left:2rem;
 }
 
 /* Optional hover effect */
 .contswitch:hover {
   background-color: #e0e0e0;
+}
+
+.contswitcher{
+  display: none;
+  padding: 10px;
+  border-left: 2px solid #ccc;
+  margin-top: 5px;
+  background-color: #fafafa;
 }
 
     
