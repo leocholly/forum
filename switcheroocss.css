@@ -18,31 +18,60 @@
 }
 
 /* BARRE SWITCHEROO --- */
-.contswitch {
-  cursor: pointer;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  user-select: none;
-  position:fixed;
-  top:4rem;
-  left:2rem;
+/* Hide the checkbox */
+.contswitch-input {
+  display: none;
 }
 
-/* Optional hover effect */
-.contswitch:hover {
+/* Clickable fixed button */
+.contswitch-label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  user-select: none;
+  position: fixed;
+  top: 4rem;
+  left: 2rem;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* Hover effect */
+.contswitch-label:hover {
   background-color: #e0e0e0;
 }
 
-.contswitcher{
-  display: none;
-  padding: 10px;
-  border-left: 2px solid #ccc;
-  margin-top: 5px;
+/* Hidden content container */
+.contswitcher {
+  display: none; /* fully hidden by default */
+  position: fixed;
+  top: 5.5rem; /* below the button */
+  left: 2rem;
+  width: 300px; /* adjust as needed */
+  max-height: 80vh; /* limit height to viewport */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   background-color: #fafafa;
+  padding: 10px;
+  z-index: 999;
 }
 
+/* Show content when checkbox is checked */
+.contswitch-input:checked + .contswitch-label + .contswitcher {
+  display: block;
+}
+
+/* + / − toggle */
+.contswitch-label::after {
+  content: " +";
+}
+.contswitch-input:checked + .contswitch-label::after {
+  content: " −";
+}
     
     .switcheroo {}
 
