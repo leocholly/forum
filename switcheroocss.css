@@ -59,7 +59,6 @@
   z-index: 999;
 
   padding: .5rem;
-  height: 3rem;
   border-radius: var(--radius);
   background: var(--neutralgrad);
 }
