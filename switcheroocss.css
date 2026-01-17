@@ -72,7 +72,9 @@
 
 .switcheroo {
   display:flex;
-  background: var(--neutraldark);
+  background: var(--neutral);
+  padding:0.4rem;
+  border-radius:0.3rem;
 }
 
 .switcheroo[position="static"] {
@@ -112,6 +114,14 @@
 .switcheroo__squircle.active::before {
   opacity: 1;
 }
+.switcheroo__squircle.active{
+  outline-color:none !important;
+}
+.switcheroo__squircle.active img{
+  filter:grayscale(1);
+  transition:0.5s ease;
+}
+  
 
 /* ========== DELETE BUTTON ========== */
 
