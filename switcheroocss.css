@@ -42,7 +42,7 @@
 
 /* Hover effect */
 .contswitch-label:hover {
-  color:var(--accentclrdark);
+  color:var(--accentclrdarker);
   transition:1s ease;
 }
 
@@ -52,13 +52,11 @@
   position: fixed;
   top: 3rem; /* below the button */
   left: 2rem;
-  width: 300px; /* adjust as needed */
-  max-height: 80vh; /* limit height to viewport */
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fafafa;
-  padding: 10px;
+  width: fit-content;
+  height:3rem;
+  border-radius: 0.5rem;
+  background:var(--neutralgrad);
+  padding: 0.5rem;
   z-index: 999;
 }
 
@@ -72,7 +70,7 @@
   content: " personnages ⇅";
   font-family:reddit sans condensed;
   font-size:10px;
-  font-weght:700;
+  font-weight:700;
   text-transform:uppercase;
   letter-spacing:0.1rem;
 }
@@ -86,55 +84,22 @@
   position: relative;
 }
 
-/* if bar on TOP */
-.switcheroo[position="top"] {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-/* if bar on BOT */
-.switcheroo[position="bottom"] {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-}
-
-/* HORIZONTAL bar */
-.switcheroo[direction="horizontal"] {
-  width: 100%;
-}
-
-/* VERTICAL bar */
-.switcheroo[direction="vertical"] {
-  height: 100%;
-}
 
 /* Circles display */
 .switcheroo__squircles {
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
   margin: 0;
   padding: 0;
   list-style: none;
-  padding: 0.1rem;
-  gap: 0.5rem;
-}
-.switcheroo[direction="horizontal"] .switcheroo__squircles {
-  flex-direction: row;
-}
-.switcheroo[direction="vertical"] .switcheroo__squircles {
-  flex-direction: column;
 }
 
 /* BAR --- */
 .switcheroo {
   color: var(--color-text);
-  background-color: var(--light);
-  border: var(--border);
-  font-size: 16px;
+  background:var(--neutraldark);
+  padding:0.25rem;
+  border-radius:0.5rem;
 }
 
 
@@ -146,17 +111,12 @@
   display: grid;
   place-items: center;
   background-color: var(--grey);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
   cursor: pointer;
-  transition: border-radius 128ms var(--ease);
 }
 
 /* Circles on hover */
 .switcheroo__squircle:hover {
-  border-radius: 6px;
-  background: var(--greyer)
+  opacity:1;
 }
 
 /* Avatar container */
@@ -164,38 +124,22 @@
 
 
 /* Avatar image */
-.switcheroo__avatar img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  transition: border-radius 128ms var(--ease);
-  position: relative;
-}
+.switcheroo__avatar img {}
 
 /* Avatar image on hover */
-.switcheroo__avatar img:hover {
-  border-radius: 5px;
-}
+.switcheroo__avatar img:hover {}
 
 /* Connected account avatar */
 .switcheroo__squircle.active,
-.switcheroo__squircle.active img {
-  border-radius: 6px;
-  cursor: default;
-}
+.switcheroo__squircle.active img {}
 
 
 /* Display of the hovered avatar */
 .switcheroo__squircle:before {
   content: "";
   display: block;
-  background-color: var(--grey);
-  border: var(--border);
-  border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 2rem;
+  width: 2rem;
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -211,7 +155,6 @@
 /* display of the selected/active account */
 .switcheroo__squircle.active:before {
   opacity: 1;
-  border-radius: 8px;
 }
 
 .switcheroo__squircle:hover:before {
@@ -226,8 +169,6 @@
   display: grid;
   place-items: center;
   position: absolute;
-  width: 16px;
-  height: 16px;
   top: -7px;
   right: -7px;
   border-radius: 50%;
@@ -236,7 +177,7 @@
   opacity: 1;
   transition: transform 128ms var(--ease), opacity 64ms var(--ease);
   cursor: pointer;
-  color: var(--light);
+  color: var(--accentclr);
 }
 .switcheroo__squircle:hover .switcheroo__delete {
   opacity: 1;
@@ -259,7 +200,7 @@
   opacity: 0;
   transition: opacity 64ms var(--ease), transform 128ms var(--ease-bounce);
   pointer-events: none;
-  color: #fff;
+  color: var(--textcolor);
 }
 
 /* name container if vertical */
