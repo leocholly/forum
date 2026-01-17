@@ -71,9 +71,8 @@
 /* ========== SWITCHER CORE ========== */
 
 .switcheroo {
-  padding: .25rem;
+  display:flex;
   background: var(--neutraldark);
-  border-radius: var(--radius);
 }
 
 .switcheroo[position="static"] {
@@ -269,4 +268,11 @@
 
 .monomer-close:hover {
   background: var(--text);
+}
+
+/* FORCE identical shape everywhere */
+.switcheroo__squircle,
+.switcheroo__squircle::before,
+.switcheroo__avatar img {
+  border-radius: 0.3rem !important;
 }
