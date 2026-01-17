@@ -1,414 +1,272 @@
-/*** ------------------------------- ***/
-/*** SWITCHEROO - Par Monomer ------ ***/
-/*** Gestionnaire de multicompte --- ***/
+/*** SWITCHEROO — CLEAN VERSION ***/
 
+/* ========== VARIABLES ========== */
 :root {
-    --text: #333;
-    --red: #D31141;
-    --link: #000;
-    --light: #FFF;
-    --lighter: #fafafa;
-    --grey: #F4F4F4;
-    --greyer: #E5E5E5;
-    --border: 1px solid #E5E5E5;
-    --font: 'Open Sans';
-    --gap-size: 16px;
-    --ease: cubic-bezier(0.4, 0.0, 0.2, 1);
-    --ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+  --text: #333;
+  --red: #D31141;
+  --light: #fff;
+  --lighter: #fafafa;
+  --grey: #f4f4f4;
+  --greyer: #e5e5e5;
+
+  --border: 1px solid var(--greyer);
+  --radius: .5rem;
+
+  --ease: cubic-bezier(.4,0,.2,1);
+  --ease-bounce: cubic-bezier(.43,.09,.38,2.56);
 }
 
-/* BARRE SWITCHEROO --- */
-/* Hide the checkbox */
-.contswitch-input {
-  display: none;
-}
+/* ========== SWITCH BUTTON ========== */
 
-/* Clickable fixed button */
+.contswitch-input { display: none; }
+
 .contswitch-label {
-  cursor: pointer;
-  display: inline-block;
-  padding: 5px 10px;
-  background:var(--neutralgrad);
-  border-radius: 3px;
-  user-select: none;
   position: fixed;
-  top: 0.75rem;
+  top: .75rem;
   left: 2rem;
-  font-weight: bold;
   z-index: 1000;
-  color:var(--accentclr);
-  transition:1s ease;
+
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: var(--neutralgrad);
+  color: var(--accentclr);
+
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+
+  transition: color .3s ease;
 }
 
-/* Hover effect */
 .contswitch-label:hover {
-  color:var(--accentclrdarker);
-  transition:1s ease;
+  color: var(--accentclrdarker);
 }
 
-/* Hidden content container */
+.contswitch-label::after {
+  content: " personnages ⇅";
+  font: 700 10px "Reddit Sans Condensed";
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+/* ========== SWITCHER CONTAINER ========== */
+
 .contswitcher {
-  display: none; /* fully hidden by default */
+  display: none;
   position: fixed;
-  top: 3rem; /* below the button */
+  top: 3rem;
   left: 2rem;
-  width: fit-content;
-  height:3rem;
-  border-radius: 0.5rem;
-  background:var(--neutralgrad);
-  padding: 0.5rem;
   z-index: 999;
+
+  padding: .5rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--neutralgrad);
 }
 
-/* Show content when checkbox is checked */
 .contswitch-input:checked + .contswitch-label + .contswitcher {
   display: block;
 }
 
-/* + / − toggle */
-.contswitch-label::after {
-  content: " personnages ⇅";
-  font-family:reddit sans condensed;
-  font-size:10px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.1rem;
+/* ========== SWITCHER CORE ========== */
+
+.switcheroo {
+  padding: .25rem;
+  background: var(--neutraldark);
+  border-radius: var(--radius);
 }
-.contswitch-input:checked + .contswitch-label::after {
-  content: " personnages ⇅";
-}
-    
-    .switcheroo {}
 
 .switcheroo[position="static"] {
   position: relative;
 }
 
-
-/* Circles display */
 .switcheroo__squircles {
   display: flex;
-  flex-direction:row;
+  gap: .25rem;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-/* BAR --- */
-.switcheroo {
-  color: var(--color-text);
-  background:var(--neutraldark);
-  padding:0.25rem;
-  border-radius:0.5rem;
-}
+/* ========== ACCOUNT CIRCLES ========== */
 
-
-/* ACCOUNT DISPLAY ---*/
-
-/* Circles */
 .switcheroo__squircle {
   position: relative;
   display: grid;
   place-items: center;
-  background-color: var(--grey);
   cursor: pointer;
 }
 
-/* Circles on hover */
-.switcheroo__squircle:hover {
-  opacity:1;
-}
-
-/* Avatar container */
-.switcheroo__avatar {}
-
-
-/* Avatar image */
-.switcheroo__avatar img {}
-
-/* Avatar image on hover */
-.switcheroo__avatar img:hover {}
-
-/* Connected account avatar */
-.switcheroo__squircle.active,
-.switcheroo__squircle.active img {}
-
-
-/* Display of the hovered avatar */
-.switcheroo__squircle:before {
+/* active / hover glow */
+.switcheroo__squircle::before {
   content: "";
-  display: block;
-  height: 2rem;
-  width: 2rem;
-  opacity: 0;
-  pointer-events: none;
   position: absolute;
-  top: -5px;
-  bottom: 0;
-  right: 0;
-  left: -5px;
+  inset: -5px;
+  border-radius: 8px;
+  opacity: 0;
   z-index: -1;
-  transform 128ms var(--ease), opacity 64ms var(--ease);
+
+  transition: opacity .15s var(--ease);
 }
 
-
-/* display of the selected/active account */
-.switcheroo__squircle.active:before {
+.switcheroo__squircle:hover::before,
+.switcheroo__squircle.active::before {
   opacity: 1;
 }
 
-.switcheroo__squircle:hover:before {
-    border-radius: 8px;
-    opacity: 1;
-  transform 128ms var(--ease), opacity 64ms var(--ease);
-}
+/* ========== DELETE BUTTON ========== */
 
-
-/* Delete button */
 .switcheroo__delete {
-  display: grid;
-  place-items: center;
   position: absolute;
   top: -7px;
   right: -7px;
-  border-radius: 50%;
-  background-color: var(--red);
-  transform: scale(0);
-  opacity: 1;
-  transition: transform 128ms var(--ease), opacity 64ms var(--ease);
-  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+
+  background: var(--red);
   color: var(--accentclr);
+  border-radius: 50%;
+
+  transform: scale(0);
+  transition: transform .15s var(--ease);
 }
+
 .switcheroo__squircle:hover .switcheroo__delete {
-  opacity: 1;
   transform: scale(1);
 }
 
+/* ========== TOOLTIP ========== */
 
-
-/* TOOLTIP NAME ---*/
-
-/* Name container */
 .switcheroo__popper {
-  background-color: var(--text);
-  padding: 0.68rem 1rem;
   position: absolute;
-  width: -webkit-max-content;
-  width: max-content;
+  padding: .5rem .75rem;
   border-radius: 4px;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity 64ms var(--ease), transform 128ms var(--ease-bounce);
-  pointer-events: none;
+
+  background: var(--text);
   color: var(--textcolor);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity .15s var(--ease),
+              transform .2s var(--ease-bounce);
 }
 
-/* name container if vertical */
-.switcheroo[direction="vertical"] .switcheroo__popper {
-  left: 155%;
-  top: 50%;
-  transform-origin: left;
-  transform: translateY(-50%) scale(0.98);
-}
-/* name container if horizontal */
-.switcheroo[direction="horizontal"] .switcheroo__popper {
-  top: 155%;
-  left: 50%;
-  transform-origin: top;
-  transform: translateX(-50%) scale(0.98);
-}
-
-/* tooltip arrow */
-.switcheroo__popper:before {
+.switcheroo__popper::before {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 24px;
-  background-color: var(--text);
-  z-index: -1;
+  width: 12px;
+  height: 12px;
+  background: var(--text);
+  transform: rotate(-45deg);
 }
 
-/* tooltip arrow if vertical */
-.switcheroo[direction="vertical"] .switcheroo__popper:before {
-  left: -2px;
+/* vertical */
+.switcheroo[direction="vertical"] .switcheroo__popper {
+  left: 150%;
+  top: 50%;
+  transform: translateY(-50%) scale(.95);
+}
+.switcheroo[direction="vertical"] .switcheroo__popper::before {
+  left: -6px;
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
 
-/* tooltip arrow if horizontal */
-.switcheroo[direction="horizontal"] .switcheroo__popper:before {
+/* horizontal */
+.switcheroo[direction="horizontal"] .switcheroo__popper {
+  top: 150%;
   left: 50%;
-  top: -2px;
+  transform: translateX(-50%) scale(.95);
+}
+.switcheroo[direction="horizontal"] .switcheroo__popper::before {
+  top: -6px;
+  left: 50%;
   transform: translateX(-50%) rotate(-45deg);
 }
 
-
-/* Tooltip display on hover */
-.switcheroo[direction="vertical"] .switcheroo__squircle:hover .switcheroo__popper {
+.switcheroo__squircle:hover .switcheroo__popper {
   opacity: 1;
-  transform: translateY(-50%) scale(1);
-}
-.switcheroo[direction="horizontal"] .switcheroo__squircle:hover .switcheroo__popper {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
+/* ========== DIVIDER ========== */
 
-
-/* LOGO --- */
-.switcheroo__logo {
-  /* display: none */
-  /* à ajouter si vous voulez supprimer le logo*/
-}
-
-/* DIVIDER --- */
 .switcheroo__divider {
-  /* display: none */
-  /* à ajouter si vous voulez supprimer le logo*/
-  
-  background-color: var(--greyer);
+  background: var(--greyer);
   border-radius: 3px;
-  transform: scale(0.8);
 }
 
-/* Divider if vertical */
 .switcheroo[direction="vertical"] .switcheroo__divider {
-  width: 100%;
   height: 2px;
+  width: 100%;
 }
 
-/* Divider if horizontal */
 .switcheroo[direction="horizontal"] .switcheroo__divider {
   width: 2px;
 }
 
+/* ========== ADD ACCOUNT BUTTON ========== */
 
-/* ADD AN ACCOUNT ---*/
-
-/* button : add an account */
 .switcheroo__squircle--button {
-  transition: border-radius 128ms var(--ease);
   color: var(--text);
 }
+
 .switcheroo__squircle--button:hover {
   color: var(--light);
-  font-weight: bold;
+  font-weight: 700;
 }
 
+/* ========== MODAL ========== */
 
-/* LOGIN MODAL --- */
-
-/* Background popup */
-.monomer-overlay {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.2s opacity ease;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-/* Login modal box */
+.monomer-overlay,
 .monomer-modal {
   position: fixed;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .2s ease;
   z-index: 999;
+}
+
+.monomer-overlay {
+  background: rgba(255,255,255,.6);
+}
+
+.monomer-modal {
+  inset: auto;
   top: 50%;
   left: 50%;
-  opacity: 0;
-  width: 94%;
-  padding: 24px 20px;
-  transition: 0.2s opacity ease;
   transform: translate(-50%, -50%);
+  padding: 24px;
   border-radius: 5px;
   background: var(--grey);
   border: var(--border);
-  color: var(--text);
 }
 
-/* Login form */
-.switcheroo__form {
-  padding: 48px;
-  background: var(--light);
-  border-radius: 5px;
-}
-
-/* field */
-.switcheroo__form-row {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  margin-bottom: 16px;
-}
-
-/* field label */
-.switcheroo__form-label {
-  margin-bottom: 8px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* text input */
-.switcheroo__form-input {
-  padding: 6px;
-  font-size: 16px;
-  border-radius: 4px;
-  width: 100%;
-  background-color: var(--light);
-  border: var(--border)!important;
-  border-bottom: 3px solid var(--greyer)!important;
-  color: var(--text);
-  cursor: text;
-}
-
-/* Login button */
-.switcheroo__form-button {
-  border-radius: 8px;
-  padding: 4px 6px;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  align-self: flex-end;
-  background-color: var(--light);
-  border: var(--border);
-  cursor: pointer;
-}
-
-.switcheroo__form-button:hover {
-  border: 1px solid transparent;
-  background: var(--text);
-  color: var(--light);
-}
-
-.monomer-modal.monomer-open, .monomer-overlay.monomer-open {
+.monomer-open {
   opacity: 1;
 }
 
-/* Close popup button */
+/* close button */
 .monomer-close {
-  font-size: 20px;
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
   position: absolute;
   top: -7px;
   right: -7px;
-  padding: 5px;
-  cursor: pointer;
-  color: #fff;
-  border: 0;
-  outline: none;
-  background: var(--red);
+
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  padding: 0;
+  background: var(--red);
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
+
 .monomer-close:hover {
   background: var(--text);
-  font-weight: 700;
 }
