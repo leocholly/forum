@@ -451,3 +451,11 @@
     opacity: .4;
 }
 
+
+.powFlex{
+   width:100%;
+   display:flex;
+   gap:0.5rem;
+}
+
+.pwl{width:50%;}
