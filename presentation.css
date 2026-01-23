@@ -1,355 +1,451 @@
+/* Root variables */
 :root {
-  --membertxt: linear-gradient(to bottom, var(--accentclrdark), var(--presclr));
-  --membergrad: linear-gradient(to right, var(--neutral), var(--presclr));
-  --membergrad2: linear-gradient(to left, var(--neutral), var(--presclr));
-  --presclr: currentColor;
+    --membertxt: linear-gradient(to bottom, var(--accentclrdark), var(--presclr));
+    --membergrad: linear-gradient(to right, var(--neutral), var(--presclr));
+    --membergrad2: linear-gradient(to left, var(--neutral), var(--presclr));
+    --presclr: currentColor;
 }
 
-.pres br { display: none; }
+/* General text and br rules */
+.pres br {
+    display: none;
+}
 
+/* Containers */
 .presContainer {
-  margin-top: 0.5rem;
-  background: var(--neutraldarkerop);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  box-shadow: var(--shadowbox);
+    margin-top: .5rem;
+    background: var(--neutraldarkerop);
+    border-radius: .5rem;
+    padding: .5rem;
+    box-shadow: var(--shadowbox);
 }
 
 .presHeader {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  box-shadow: var(--shadowbox);
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    box-shadow: var(--shadowbox);
 }
 
 .presHeader::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--membergrad);
-  opacity: 0.5;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: 0.5rem;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--membergrad);
+    opacity: .5;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: .5rem;
 }
 
-.presHeader > * { position: relative; z-index: 0; }
+.presHeader > * {
+    position: relative;
+    z-index: 0;
+}
 
+/* Name & icons */
 .presName {
-  font-family: domine;
-  font-size: 32px;
-  letter-spacing: -0.05rem;
-  font-weight: 600;
-  text-transform: lowercase;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    font-family: domine;
+    font-size: 32px;
+    letter-spacing: -.05rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 .presName::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: var(--presclr);
-  opacity: 0.4;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--presclr);
+    opacity: .4;
 }
 
 .presIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .presIcon img {
-  width: 65px;
-  height: 65px;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadowbox);
-  opacity: 0.9;
+    width: 65px;
+    height: 65px;
+    border-radius: .5rem;
+    box-shadow: var(--shadowbox);
+    opacity: .9;
 }
 
+/* Faceclaim & ID */
 .presfaceclaim {
-  display: flex;
-  gap: 0.2rem;
-  align-items: center;
-  font-family: domine;
-  font-size: 10px;
-  font-weight: 600;
-  opacity: 0.9;
-  text-shadow: var(--shadowbox);
-  margin-top: -0.5rem;
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    font-family: domine;
+    font-size: 10px;
+    font-weight: 600;
+    opacity: .9;
+    text-shadow: var(--shadowbox);
+    margin-top: -.5rem;
 }
 
 .presID {
-  display: flex;
-  flex-direction: column;
-  border-left: 7px dotted var(--presclr);
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 7px dotted var(--presclr);
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    width: 100%;
 }
 
 .presHl {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
 }
 
 .presGroupe {
-  font-family: domine;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.9;
-  text-shadow: var(--shadowbox);
+    font-family: domine;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: .9;
+    text-shadow: var(--shadowbox);
 }
 
 .presFaceclaim::before {
-  content: "\2943";
-  width: 0.5rem;
-  color: var(--presclr);
+    content: "\2943";
+    width: .5rem;
+    color: var(--presclr);
+}
+
+/* Tab system */
+#preview .tabContent {
+    display: block !important;
 }
 
 .tc[data-system="prestabs"] {
-  width: 100%;
-  background: var(--neutraldarkerop);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  box-shadow: var(--shadowbox);
+    width: 100%;
+    background: var(--neutraldarkerop);
+    padding: .5rem;
+    border-radius: .5rem;
+    margin: .5rem 0;
+    box-shadow: var(--shadowbox);
 }
 
 .tc[data-system="prestabs"] .tb {
-  font-family: "reddit sans condensed";
-  font-size: 10px;
-  text-transform: uppercase;
-  background: var(--neutralgrad);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadowbox);
-  font-weight: 700;
-  letter-spacing: 0.05rem;
+    font-family: reddit sans condensed;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: var(--neutralgrad);
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: var(--shadowbox);
+    font-weight: 700;
+    letter-spacing: .05rem;
 }
 
 .pres .tbs {
-  position: relative;
-  z-index: 0;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadowbox);
-  display: flex;
-  gap: 0.2rem;
+    position: relative;
+    z-index: 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: var(--shadowbox);
+    display: flex;
+    gap: .2rem;
 }
 
 .pres .tbs::before {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--presclr);
-  opacity: 0.4;
-  align-self: center;
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--presclr);
+    opacity: .4;
+    align-self: center;
 }
 
 .pres .tbs::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--membergrad2);
-  opacity: 0.5;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: 0.5rem;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--membergrad2);
+    opacity: .5;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: .5rem;
 }
 
+/* Text boxes */
 .presTxt {
-  background: var(--neutralgrad);
-  border-radius: 0.5rem;
-  font-size: 12px;
-  padding: 0.5rem;
-  box-shadow: var(--shadowbox);
+    background: var(--neutralgrad);
+    border-radius: .5rem;
+    font-size: 12px;
+    padding: .5rem;
+    box-shadow: var(--shadowbox);
 }
 
-.presTxt br { display: unset; }
+.presTxt br {
+    display: unset;
+}
 
-.pres .tcnts { margin-top: 0.5rem; }
+.pres .tcnts {
+    margin-top: .5rem;
+}
 
+/* Avatar */
 .presAv {
-  width: 225px;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadowbox);
+    width: 225px;
+    border-radius: .5rem;
+    box-shadow: var(--shadowbox);
 }
 
-.idFlex { display: flex; gap: 0.5rem; }
-.idL { width: 100%; display: flex; }
-.idR { display: flex; }
+/* Layout flex */
+.idFlex {
+    display: flex;
+    gap: .5rem;
+}
+
+.idL {
+    width: 100%;
+}
+
+.idR {
+    display: flex;
+}
+
 .idR img.presAv {
-  width: 225px;
-  border-radius: 0.5rem;
-  box-shadow: 4px 4px 0px var(--presclr);
+    width: 225px;
+    border-radius: .5rem;
+    box-shadow: 4px 4px 0px var(--presclr);
 }
 
-.presPercb { display: flex; width: 100%; padding: 0 2rem; gap: 0.5rem; }
+/* Percent bars */
+.presPercb {
+    display: flex;
+    width: 100%;
+    padding: 0 2rem;
+    gap: .5rem;
+}
+
 .presPercc {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: .2rem;
 }
 
 .percBk {
-  display: flex;
-  width: 100%;
-  background: var(--neutraldarkerop);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: var(--shadowbox);
-  gap: 0.2rem;
+    display: flex;
+    width: 100%;
+    background: var(--neutraldarkerop);
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: var(--shadowbox);
+    gap: .2rem;
 }
 
 .PercFl {
-  background: var(--membergrad);
-  height: 0.5rem;
-  overflow: hidden;
-  box-shadow: var(--shadowbox);
+    background: var(--membergrad);
+    height: .5rem;
+    overflow: hidden;
+    box-shadow: var(--shadowbox);
 }
 
 .percTle {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  font-family: "reddit sans condensed";
-  font-weight: 600;
-  margin-bottom: 0.2rem;
-  margin-left: 0.5rem;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-family: reddit sans condensed;
+    font-weight: 600;
+    margin-bottom: .2rem;
+    margin-left: .5rem;
 }
 
-.percTle b { color: var(--presclr); }
+.percTle b {
+    color: var(--presclr);
+}
 
+/* Dividers */
 .memberDiv {
-  background: var(--membergrad);
-  width: 95%;
-  height: 1px;
-  opacity: 0.7;
-  box-shadow: var(--shadowbox);
+    background: var(--membergrad);
+    width: 95%;
+    height: 1px;
+    opacity: .7;
+    box-shadow: var(--shadowbox);
 }
 
+/* Power boxes */
 .powallCont {
-  width: 100%;
-  text-align: justify;
-  height: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: 0.5rem;
-  scrollbar-color: var(--neutral) var(--neutraldarkerop);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    width: 100%;
+    text-align: justify;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: 0.5rem;
+    scrollbar-color: var(--neutral) var(--neutraldarkerop);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .powBox {
-  height: 140px;
-  background: var(--neutraldarkerop);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  margin-top: 0.5rem;
+    height: 140px;
+    background: var(--neutraldarkerop);
+    padding: .5rem;
+    border-radius: .5rem;
+    margin-top: .5rem;
 }
 
-.pbI { overflow-y: auto; height: 100%; }
-.pbI br { display: unset !important; }
+.pbI {
+    overflow-y: auto;
+    height: 100%;
+}
 
+.pbI br {
+    display: unset !important;
+}
+
+/* Gradient text */
 .mgrad, mgrad {
-  background: var(--membertxt);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: var(--membertxt);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.idContainer, .idContainer2, .smallContainer {
-  width: 100%;
-  text-align: justify;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: 0.5rem;
-  scrollbar-color: var(--neutral) var(--neutraldarkerop);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0 1rem;
+/* ID container */
+.idContainer br {
+    display: none;
 }
 
-.idContainer br, .idContainer2 br { display: none; }
-.idField br { display: unset; }
+.idContainer,
+.idContainer2 {
+    width: 100%;
+    text-align: justify;
+    height: 360px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: 0.5rem;
+    scrollbar-color: var(--neutral) var(--neutraldarkerop);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 1rem;
+}
 
+/* Webkit scrollbar */
+.idContainer::-webkit-scrollbar,
+.idContainer2::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.idContainer::-webkit-scrollbar-track,
+.idContainer2::-webkit-scrollbar-track {
+    background: var(--neutraldarkerop);
+}
+
+.idContainer::-webkit-scrollbar-thumb,
+.idContainer2::-webkit-scrollbar-thumb {
+    background-color: var(--neutral);
+    border-radius: 3px;
+}
+
+.idContainer::-webkit-scrollbar-thumb:hover,
+.idContainer:hover::-webkit-scrollbar-thumb {
+    background: var(--neutral) !important;
+}
+
+.idContainer::-webkit-scrollbar-button,
+.idContainer2::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Fields */
 .idField {
-  font-size: 13px;
-  font-family: ruda;
+    font-size: 13px;
+    font-family: ruda;
 }
 
 .idField b {
-  color: var(--presclr);
-  text-shadow: var(--shadowbox);
-  font-weight: 900;
-  font-family: "reddit sans condensed";
-  text-transform: uppercase;
+    color: var(--presclr);
+    text-shadow: var(--shadowbox);
+    font-weight: 900;
+    font-family: reddit sans condensed;
+    text-transform: uppercase;
 }
 
+.idField br {
+    display: unset;
+}
+
+/* Links */
 .pres a {
-  color: var(--presclr);
-  transition: 0.6s ease;
+    color: var(--presclr);
+    transition: 0.6s ease;
 }
 
 .pres a:hover {
-  color: var(--contrastlight);
-  transition: 0.6s ease;
+    color: var(--contrastlight);
+    transition: 0.6s ease;
 }
 
+/* Tabs active state */
 .tb.active {
-  filter: drop-shadow(2px 2px 0px var(--presclr));
-  transition: none;
+    filter: drop-shadow(2px 2px 0px var(--presclr));
+    transition: none;
 }
 
-.tcnt.active, .ntcnt.active { display: flex; flex-direction: column; gap: 0.5rem; }
+/* Small container */
+.smallContainer {
+    width: 100%;
+    text-align: justify;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: 0.5rem;
+    scrollbar-color: var(--neutral) var(--neutraldarkerop);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 1rem;
+}
 
+.tcnt.active,
+.ntcnt.active {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.pres .idContainer::-webkit-scrollbar-thumb:hover {
+    background-color: var(--neutral) !important;
+}
+
+/* Pres Moments */
 .presMoments {
-  font-family: "reddit sans condensed";
-  font-size: 14px;
-  letter-spacing: 0.02rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  white-space: nowrap;
-  text-shadow: var(--shadowbox);
+    font-family: reddit sans condensed;
+    font-size: 14px;
+    letter-spacing: .02rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    text-wrap-mode: nowrap;
+    text-shadow: var(--shadowbox);
 }
 
 .presMoments::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: var(--presclr);
-  opacity: 0.4;
-}
-
-.presMoments b { color: var(--presclr); }
-
-.prestxt br { display: none; }
-
-.presCredits {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  background: var(--neutralgrad);
-  box-shadow: 2px 2px 0px var(--presclr);
-  border-radius: 0.5rem;
-  font-family: "Reddit Sans Condensed";
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.02rem;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--presclr);
+    opacity: .4;
 }
