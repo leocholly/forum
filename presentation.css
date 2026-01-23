@@ -189,6 +189,7 @@
     font-size: 12px;
     padding: .5rem;
     box-shadow: var(--shadowbox);
+    margin-top:0.5rem;
 }
 
 .presTxt br {
@@ -449,3 +450,4 @@
     background: var(--presclr);
     opacity: .4;
 }
+
