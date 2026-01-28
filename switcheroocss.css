@@ -22,10 +22,10 @@
 
 .contswitch-label {
   position: fixed;
-  top: .75rem;
-  left: 2rem;
+  top: .2rem;
+  left: 20rem;
   z-index: 1000;
-
+  height:1.6rem;
   padding: 5px 10px;
   border-radius: 3px;
   background: var(--neutralgrad);
@@ -36,6 +36,9 @@
   user-select: none;
 
   transition: color .3s ease;
+  display:flex;
+  align-items:center;
+  justify-content:cen
 }
 
 .contswitch-label:hover {
@@ -43,7 +46,7 @@
 }
 
 .contswitch-label::after {
-  content: " personnages ⇅";
+  content: "⇅";
   font: 700 10px "Reddit Sans Condensed";
   text-transform: uppercase;
   letter-spacing: .1rem;
