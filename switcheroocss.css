@@ -26,7 +26,7 @@
     left: 2.8rem;
     z-index: 1000;
     height: 2rem;
-    background: var(--accentgradop2);
+    background: var(--neutraldarkerop);
     color: var(--accentclr);
     font-weight: 700;
     cursor: pointer;
