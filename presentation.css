@@ -76,8 +76,8 @@
 }
 
 .presIcon img {
-    width: 65px;
-    height: 65px;
+    width: 85px;
+    height: 85px;
     border-radius: .5rem;
     box-shadow: var(--shadowbox);
     opacity: .9;
