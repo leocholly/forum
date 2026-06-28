@@ -1,0 +1,500 @@
+
+/* =========================
+   FACECLAIM / BASIC TEXT
+========================= */
+
+.fc-faceclaim b {
+  color: var(--accentclr);
+}
+.fc-occupation {
+  text-transform: lowercase;
+}
+
+
+/* =========================
+   GROUP BASE STYLES
+========================= */
+
+.fc-group {
+  color: var(--accentclr);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* =========================
+   ROW / CONTAINER LAYOUT
+========================= */
+
+.fc-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--neutraldark);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadowbox);
+  font-family: 'Reddit Sans Condensed';
+  text-transform: uppercase;
+}
+
+.fc-header,
+.fc-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.fc-header {
+  font-weight: 500;
+  background: var(--accentgradop2);
+  padding: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--contrastlight);
+  border-radius: 0.4rem 0.4rem 0 0;
+  font-family: 'Geom';
+}
+
+.fc-header div {
+  cursor: pointer;
+  user-select: none;
+}
+
+.fc-row {
+  padding: 0.3rem;
+  background: var(--neutraldark);
+}
+
+.fc-row:hover {
+  background: rgba(255, 255, 255, .03);
+}
+
+/* =========================
+   LIST WRAPPER
+========================= */
+
+.fc-rows {
+  background: var(--neutral);
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  box-shadow: var(--shadowbox);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* =========================
+   COLUMN SIZING
+========================= */
+
+.fc-gender { flex: 0 0 40px; text-align: center; }
+.fc-faceclaim { flex: 2; display: flex; flex-direction: column; }
+.fc-character { flex: 2; }
+.fc-player { flex: 1.5; }
+.fc-group { flex: 1.5; }
+.fc-occupation { flex: 2; }
+.fc-status { flex: 1.2; }
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.fc-status tt,
+.fc-status rr {
+  background: var(--neutralgrad);
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  color: var(--accentclr);
+  font-family: unset;
+  border: 1px solid var(--accentclrop2);
+}
+
+.fc-status ll {
+  background: var(--accentgradop2);
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--contrastlight);
+  border: 1px solid var(--accentclrop2);
+  font-family: unset;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.fc-stats-btn {
+  background: var(--neutralgrad);
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  color: var(--accentclr);
+  font-family: 'Geom';
+  border: 1px solid var(--accentclrop2);
+  text-transform: uppercase;
+  opacity: 0.9;
+  transition: all ease 0.3s;
+}
+
+.fc-stats-btn:hover {
+  opacity: 1;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.fc-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.fc-modal.show {
+  display: flex !important;
+}
+
+.fc-modal-inner {
+  width: 60rem;
+  border-radius: 0.3rem;
+  position: relative;
+  background: var(--accentgradop);
+  padding: 0.8rem;
+  box-shadow: var(--shadowbox);
+}
+
+.fc-modal-close {
+  position: absolute;
+  right: 0.3rem;
+  cursor: pointer;
+  font-size: 10px;
+  top: 0rem;
+  font-weight: 900;
+  font-family: reddit sans condensed;
+}
+
+/* =========================
+   STAT LAYOUTS
+========================= */
+
+.fc-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  background: var(--neutral);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  box-shadow: var(--shadowbox);
+}
+
+.fc-stat-block {
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--neutraldark);
+  box-shadow: var(--shadowbox);
+}
+
+.fc-stat-title {
+  background: var(--accentgrad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Reddit Sans Condensed';
+  text-transform: uppercase;
+  width: 100%;
+  text-align: right;
+  border-bottom: 1px dotted var(--accentclrop);
+  margin-bottom: 0.2rem;
+}
+
+.fc-stat-line {
+  background: var(--accentgradop2);
+  border-radius: 0.3rem;
+  border: 1px solid var(--accentclrop2);
+  padding: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid var(--accentclrop);
+  border-right: 3px solid var(--accentclrop);
+}
+
+/* variants */
+.fc-stat-line.fc-stat-summary {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+.fc-stat-line.fc-stat-summary b,
+.fc-stat-leg b {
+  color: var(--accentclr);
+  font-weight: 700;
+}
+
+.fc-stat-leg {
+  font-size: 11px;
+  font-family: 'Reddit Sans Condensed';
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.fc-stat-summary-total {
+  font-size: 10px;
+  border-top: 1px dotted var(--accentclrop);
+  margin-top: 0.1rem;
+  padding-top: 0.2rem;
+}
+
+.fc-stat-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+
+.player-stat-wrap {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fc-stats-layout {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.fc-stats-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fc-stats-right {
+  flex: 1;
+  display: flex;
+}
+
+.fc-full-height {
+  flex: 1;
+}
+
+/* =========================
+   RULES BLOCK
+========================= */
+
+.fc-rules-wrapper {
+  background: var(--neutraldark);
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.fc-rules-inner {
+  background: var(--neutral);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--neutraldarkeroop);
+  font-family: montserrat;
+  font-weight: 450;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.fc-footer {
+  font-weight: 800;
+  background: var(--accentgradop2);
+  padding: 0.4rem 0;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--contrastlight);
+  border-radius: 0 0 0.3rem 0.3rem;
+  height: 32px;
+}
+
+/* =========================
+   GROUP HOVER + THEMES
+========================= */
+
+.fc-group-bloomweavers,
+.fc-group-wildkins,
+.fc-group-tideborns,
+.fc-group-wanderers,
+.fc-group-veilwardens,
+.fc-group-pyrebornes,
+.fc-group-kinwovens,
+.fc-group-citizens,
+.fc-group-duskwalkers,
+.fc-group-terrafolks {
+  transition: 0.1s ease;
+}
+
+.fc-group-bloomweavers:hover { background: var(--bloomgradoop); }
+.fc-group-wildkins:hover { background: var(--wildgradoop); }
+.fc-group-tideborns:hover { background: var(--tidegradoop); }
+.fc-group-wanderers:hover { background: var(--wandergradoop); }
+.fc-group-veilwardens:hover { background: var(--veilgradoop); }
+.fc-group-pyrebornes:hover { background: var(--pyregradoop); }
+.fc-group-kinwovens:hover { background: var(--kingradoop); }
+.fc-group-citizens:hover { background: var(--citigradoop); }
+.fc-group-duskwalkers:hover { background: var(--duskgradoop); }
+.fc-group-terrafolks:hover { background: var(--terragradoop); }
+
+.fc-group-bloomweavers:hover,
+.fc-group-wildkins:hover,
+.fc-group-tideborns:hover,
+.fc-group-wanderers:hover,
+.fc-group-veilwardens:hover,
+.fc-group-pyrebornes:hover,
+.fc-group-kinwovens:hover,
+.fc-group-citizens:hover,
+.fc-group-duskwalkers:hover,
+.fc-group-terrafolks:hover {
+  transition: 0.2s ease;
+}
+
+/* =========================
+   GROUP LINKS
+========================= */
+
+.fc-group-bloomweavers a,
+.fc-group-wildkins a,
+.fc-group-tideborns a,
+.fc-group-wanderers a,
+.fc-group-veilwardens a,
+.fc-group-pyrebornes a,
+.fc-group-kinwovens a,
+.fc-group-citizens a,
+.fc-group-duskwalkers a,
+.fc-group-terrafolks a {
+  transition: 0.2s ease;
+}
+
+.fc-group-bloomweavers a { color: var(--bloom); }
+.fc-group-wildkins a { color: var(--wild); }
+.fc-group-tideborns a { color: var(--tide); }
+.fc-group-wanderers a { color: var(--wander); }
+.fc-group-veilwardens a { color: var(--veil); }
+.fc-group-pyrebornes a { color: var(--pyre); }
+.fc-group-kinwovens a { color: var(--kin); }
+.fc-group-citizens a { color: var(--cit); }
+.fc-group-duskwalkers a { color: var(--dusk); }
+.fc-group-terrafolks a { color: var(--terra); }
+
+/* hover + prefix shared */
+.fc-group-kinwovens a:hover,
+.fc-group-citizens a:hover,
+.fc-group-bloomweavers a:hover,
+.fc-group-veilwardens a:hover,
+.fc-group-tideborns a:hover,
+.fc-group-wildkins a:hover,
+.fc-group-wanderers a:hover,
+.fc-group-pyrebornes a:hover,
+.fc-group-duskwalkers a:hover,
+.fc-group-terrafolks a:hover {
+  opacity: 0.8;
+}
+
+.fc-group-kinwovens a::before,
+.fc-group-citizens a::before,
+.fc-group-bloomweavers a::before,
+.fc-group-veilwardens a::before,
+.fc-group-tideborns a::before,
+.fc-group-wildkins a::before,
+.fc-group-wanderers a::before,
+.fc-group-pyrebornes a::before,
+.fc-group-duskwalkers a::before,
+.fc-group-terrafolks a::before {
+  content: '@';
+  color: var(--textcolor) !important;
+  margin-right: 0.3rem;
+}
+
+/* =========================
+   SPECIAL ELEMENTS
+========================= */
+
+.blockTles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-family: "geom";
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding: 0.5rem 0.3rem;
+}
+
+.blockTles::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--accentgrad);
+  opacity: 0.4;
+}
+
+/* =========================
+   BONUS TOOLTIP
+========================= */
+
+.fc-stat-groups .fc-bonus {
+  position: relative;
+}
+
+.fc-stat-groups .fc-bonus::after {
+  content: "\2605";
+  margin-left: 0.4rem;
+  color: var(--accentclr);
+  cursor: help;
+  position: absolute;
+  right: 0.3rem;
+}
+
+.fc-stat-groups .fc-bonus::before {
+  content: "points bonus à l'inscription";
+  position: absolute;
+  right: 1.3rem;
+  background: var(--neutraldark);
+  border: 1px solid var(--accentclr);
+  padding: 0.1rem;
+  font-size: 9px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: 0.2s ease;
+  z-index: 10;
+  border-radius: 0.3rem;
+}
+
+.fc-stat-groups .fc-bonus:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
