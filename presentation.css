@@ -277,9 +277,9 @@
 /* Dividers */
 .memberDiv {
     background: var(--membergrad);
-    width: 95%;
+    width: 100%;
     height: 1px;
-    opacity: .7;
+    opacity: .5;
     box-shadow: var(--shadowbox);
 }
 
