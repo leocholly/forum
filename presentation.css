@@ -1,8 +1,8 @@
 /* Root variables */
 :root {
     --membertxt: linear-gradient(to bottom, var(--accentclrdark), var(--presclr));
-    --membergrad: linear-gradient(to right, var(--neutral), var(--presclr));
-    --membergrad2: linear-gradient(to left, var(--neutral), var(--presclr));
+    --membergrad: linear-gradient(to right, var(--neutraldarker), var(--presclr));
+    --membergrad2: linear-gradient(to left, var(--neutraldarker), var(--presclr));
     --presclr: currentColor;
 }
 
@@ -14,7 +14,7 @@
 /* Containers */
 .presContainer {
     margin-top: .5rem;
-    background: var(--neutraldarkerop);
+    background: var(--neutral);
     border-radius: .5rem;
     padding: .5rem;
     box-shadow: var(--shadowbox);
@@ -132,7 +132,7 @@
 
 .tc[data-system="prestabs"] {
     width: 100%;
-    background: var(--neutraldarkerop);
+    background: var(--neutraldarker);
     padding: .5rem;
     border-radius: .5rem;
     margin: .5rem 0;
@@ -194,6 +194,14 @@
     box-shadow: var(--shadowbox);
     margin-top:0.5rem;
 }
+.headTxt {
+    background: var(--neutraldarker);
+    border-radius: .5rem;
+    font-size: 12px;
+    padding: .5rem;
+    box-shadow: var(--shadowbox);
+    margin-top:0.5rem;
+}
 
 .presTxt br {
     display: unset;
@@ -234,30 +242,34 @@
 .presPercb {
     display: flex;
     width: 100%;
-    padding: 0 2rem;
-    gap: .5rem;
+    gap: 1rem;
+    background: var(--neutraldark);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: var(--shadowbox);
 }
 
 .presPercc {
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: .2rem;
+    gap: .3rem;
 }
 
 .percBk {
     display: flex;
     width: 100%;
-    background: var(--neutraldarkerop);
+    background: var(--neutraldarker);
     border-radius: .5rem;
     overflow: hidden;
-    box-shadow: var(--shadowbox);
     gap: .2rem;
+    opacity: 0.7;
+    border: 1px solid var(--accentclrop2);
 }
 
 .PercFl {
     background: var(--membergrad);
-    height: .5rem;
+    height: .6rem;
     overflow: hidden;
     box-shadow: var(--shadowbox);
 }
