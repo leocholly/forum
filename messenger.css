@@ -71,7 +71,7 @@
   z-index: 999;
   transition-property: right;
   transition-duration: 500ms;
-  display: grid;
+  display: none; /* grid */
   place-items: center;
 }
 
