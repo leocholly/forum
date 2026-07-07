@@ -5,7 +5,15 @@
 
 .fc-faceclaim b {
   color: var(--accentclr);
+  font-size: 14px;
+  font-weight: 600;
 }
+.fc-faceclaim gg {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 0.3rem;
+}
+
 .fc-occupation {
   text-transform: lowercase;
 }
