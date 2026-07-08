@@ -400,19 +400,15 @@
 .fc-group-citizens a,
 .fc-group-duskwalkers a,
 .fc-group-terrafolks a {
-  transition: 0.2s ease;
-}
+  transition: 0.2s ease;}
 
-.fc-group-bloomweavers a { color: var(--bloom); }
-.fc-group-wildkins a { color: var(--wild); }
-.fc-group-tideborns a { color: var(--tide); }
-.fc-group-wanderers a { color: var(--wander); }
-.fc-group-veilwardens a { color: var(--veil); }
-.fc-group-pyrebornes a { color: var(--pyre); }
-.fc-group-kinwovens a { color: var(--kin); }
-.fc-group-citizens a { color: var(--cit); }
-.fc-group-duskwalkers a { color: var(--dusk); }
-.fc-group-terrafolks a { color: var(--terra); }
+.fc-group-bloomweavers a {color: var(--weaver);}
+.fc-group-wildkins a {color: var(--kin);}
+.fc-group-tideborns a {color: var(--tide);}
+.fc-group-pyrebornes a {color: var(--pyre);}
+.fc-group-veilwardens a {color: var(--warden);}
+.fc-group-duskwalkers a {color: var(--dusk);}
+.fc-group-terrafolks a {color: var(--terra);}
 
 /* hover + prefix shared */
 .fc-group-kinwovens a:hover,
