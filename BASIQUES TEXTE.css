@@ -1,0 +1,143 @@
+/*-------- GROUPES (ROOT) ----------*/
+:root{
+--weaver: #CF8399;
+--weaverop: rgba(207, 131, 153, 0.5);
+--weaveroop: rgba(207, 131, 153, 0.3);
+
+--pyre: #C86A3A;
+--pyreop: rgba(200, 106, 58, 0.5);
+--pyreoop: rgba(200, 106, 58, 0.3);
+
+--kin: #5D7395;
+--kinop: rgba(93, 115, 149, 0.5);
+--kinoop: rgba(93, 115, 149, 0.3);
+
+--tide: #309593;
+--tideop: rgba(48, 149, 147, 0.5);
+--tideoop: rgba(48, 149, 147, 0.3);
+
+--terra: #61A680;
+--terraop: rgba(97, 166, 128, 0.5);
+--terraoop: rgba(97, 166, 128, 0.3);
+
+--dusk: #C14F75;
+--duskop: rgba(193, 79, 117, 0.5);
+--duskoop: rgba(193, 79, 117, 0.3);
+
+--warden: #864C89;
+--wardenop: rgba(134, 76, 137, 0.5);
+--wardenoop: rgba(134, 76, 137, 0.3);
+  
+  /* GROUPES GRADIENTS (BOTTIN) */ 
+--bloomgradoop: linear-gradient(
+    to right,
+    var(--weaveroop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--wildgradoop: linear-gradient(
+    to right,
+    var(--kinoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--pyregradoop: linear-gradient(
+    to right,
+    var(--pyreoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--kingradoop: linear-gradient(
+    to right,
+    var(--kinoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--tidegradoop: linear-gradient(
+    to right,
+    var(--tideoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--terragradoop: linear-gradient(
+    to right,
+    var(--terraoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--duskgradoop: linear-gradient(
+    to right,
+    var(--duskoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+
+--veilgradoop: linear-gradient(
+    to right,
+    var(--wardenoop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+  }
+/*-------- CLASSES DE BASE ---------*/
+
+.weaver, weaver { color: var(--weaver);}
+
+.pyre, pyre {color: var(--pyre);}
+
+.kin, kin {color: var(--kin);}
+
+.tide, tide {color: var(--tide);}
+
+.terra, terra {color: var(--terra);}
+
+.dusk, dusk {color: var(--dusk);}
+
+.warden, warden {color: var(--warden);}
+  
+/*--------- OPACITÉS ---------*/  
+  
+  /* 0.5 */
+.weaverop, weaverop { color: var(--weaverop);}
+  
+.pyreop, pyreop {color: var(--pyreop);}  
+  
+.kinop, kinop {color: var(--kinop);}
+  
+.tideop, tideop {color: var(--tideop);}
+
+.terraop, terraop {color: var(--terraop);}
+
+.duskop, duskop {color: var(--duskop);}
+
+.wardenop, wardenop {color: var(--wardenop);}
+  
+  /* 0.3 */ 
+ 
+.weaveroop, weaveroop {color: var(--weaveroop);}
+
+.pyreoop, pyreoop {color: var(--pyreoop);}
+
+.kinoop, kinoop {color: var(--kinoop);}
+
+.tideoop, tideoop {color: var(--tideoop);}
+
+.terraoop, terraoop {color: var(--terraoop);}
+
+.duskoop, duskoop {color: var(--duskoop);}
+
+.wardenoop, wardenoop {color: var(--wardenoop);}
