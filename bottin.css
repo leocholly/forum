@@ -358,7 +358,8 @@
 .fc-group-kinwovens,
 .fc-group-citizens,
 .fc-group-duskwalkers,
-.fc-group-terrafolks {
+.fc-group-terrafolks,
+.fc-group-enti {
   transition: 0.1s ease;
 }
 
@@ -372,6 +373,7 @@
 .fc-group-citizens:hover { background: var(--citigradoop); }
 .fc-group-duskwalkers:hover { background: var(--duskgradoop); }
 .fc-group-terrafolks:hover { background: var(--terragradoop); }
+.fc-group-enti:hover { background: var(--terragradoop); }
 
 .fc-group-bloomweavers:hover,
 .fc-group-wildkins:hover,
@@ -382,7 +384,8 @@
 .fc-group-kinwovens:hover,
 .fc-group-citizens:hover,
 .fc-group-duskwalkers:hover,
-.fc-group-terrafolks:hover {
+.fc-group-terrafolks:hover,
+.fc-group-enti:hover {
   transition: 0.2s ease;
 }
 
@@ -399,7 +402,8 @@
 .fc-group-kinwovens a,
 .fc-group-citizens a,
 .fc-group-duskwalkers a,
-.fc-group-terrafolks a {
+.fc-group-terrafolks a,
+.fc-group-enti a {
   transition: 0.2s ease;}
 
 .fc-group-bloomweavers a {color: var(--weaver);}
@@ -409,6 +413,7 @@
 .fc-group-veilwardens a {color: var(--warden);}
 .fc-group-duskwalkers a {color: var(--dusk);}
 .fc-group-terrafolks a {color: var(--terra);}
+.fc-group-enti a {color: var(--enti);}
 
 /* hover + prefix shared */
 .fc-group-kinwovens a:hover,
@@ -420,7 +425,8 @@
 .fc-group-wanderers a:hover,
 .fc-group-pyrebornes a:hover,
 .fc-group-duskwalkers a:hover,
-.fc-group-terrafolks a:hover {
+.fc-group-terrafolks a:hover,
+.fc-group-enti a:hover {
   opacity: 0.8;
 }
 
@@ -433,7 +439,8 @@
 .fc-group-wanderers a::before,
 .fc-group-pyrebornes a::before,
 .fc-group-duskwalkers a::before,
-.fc-group-terrafolks a::before {
+.fc-group-terrafolks a::before,
+.fc-group-enti a::before {
   content: '@';
   color: var(--textcolor) !important;
   margin-right: 0.3rem;
