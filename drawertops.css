@@ -1,0 +1,114 @@
+/* ==========================================================================
+   1. Base Drawer Elements
+   ========================================================================== */
+
+.drawer {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  z-index: 9999;
+  transform: translateY(-50%);
+}
+
+.drawerContent {
+  width: 9rem;
+  height: 11rem;
+  padding: var(--radius);
+  background: var(--accentgradop2);
+  border: 1px solid var(--accentclrop2);
+  border-left: none;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  transform: translateX(-100%);
+  transition: transform .35s ease;
+}
+
+.drawerArrow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 5rem;
+  background: var(--accentclr);
+  border: 1px solid var(--accentclrop);
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  box-shadow: var(--shadowbox);
+  color: var(--neutral);
+  font-family: geom;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+
+
+/* ==========================================================================
+   2. Inner Content & Child Elements
+   ========================================================================== */
+
+.drawerSwitcher {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: var(--radius);
+  gap: var(--sradius);
+  background: var(--neutral);
+  border: 1px solid var(--accentclrop);
+  border-radius: var(--radius);
+  box-shadow: var(--shadowbox);
+}
+
+.drawerSites {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--radius);
+  border-radius: var(--sradius);
+}
+
+.drawerSites img {
+  width: 27px;
+  height: 27px;
+  padding: var(--xsradius);
+  background: var(--neutralgrad);
+  border: 1px solid var(--accentclrop2);
+  border-radius: var(--xsradius);
+}
+
+.sitesEx {
+  padding: var(--xsradius);
+  background: var(--accentgrad2op2);
+  border: 1px solid var(--accentclrop);
+  border-radius: var(--sradius);
+  box-shadow: var(--shadowbox);
+  font-family: geom;
+  font-size: 11px;
+  font-weight: 450;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+
+/* ==========================================================================
+   3. Open States (Checkbox Toggled)
+   ========================================================================== */
+
+#drawerToggle:checked + .drawer .drawerContent {
+  transform: translateX(0);
+}
+
+#drawerToggle:checked + .drawer .drawerArrow {
+  left: 9rem;
+  border-left: 1px solid var(--accentclrop);
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+  transform: translateY(-50%) rotate(180deg);
+}
