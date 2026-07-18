@@ -1,0 +1,216 @@
+/* ==========================================================================
+   1. Structural & Layout Components
+   ========================================================================== */
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--radius);
+  width: 33rem;
+}
+
+.navLf {
+  display: flex;
+  flex-direction: column;
+}
+
+.navHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 60px;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  border-left: 3px double var(--accentclrdarkop2);
+  border-right: 3px double var(--accentclrdarkop2);
+}
+
+.navGen {
+  display: flex;
+  justify-content: space-between;
+  width: 26rem;
+  padding-top: var(--sradius);
+}
+
+.navGen > li:nth-child(-n+6) {
+  display: none;
+}
+
+
+/* ==========================================================================
+   2. User & Avatar Components
+   ========================================================================== */
+
+.navAv {
+  padding: var(--xsradius);
+  background: var(--accentgrad2op2);
+  border: 1px solid var(--accentclrop);
+  border-radius: var(--sradius);
+}
+
+.navAv img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--sradius);
+  box-shadow: var(--shadowbox);
+}
+
+.navUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25.7rem;
+  height: 1.8rem;
+  padding-left: 0.5rem;
+  background: var(--neutralgrad);
+  border: 1px solid var(--accentclrdarkop);
+  border-radius: var(--sradius);
+  box-shadow: var(--shadowbox);
+  font-family: geom;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.navUserl {
+  display: flex;
+  align-items: center;
+  gap: var(--xsradius);
+  height: 100%;
+  padding: 0 var(--xsradius);
+  background: var(--accentgrad2op2);
+  border-left: 3px solid var(--accentclrdark);
+  border-radius: 0 var(--sradius) var(--sradius) 0;
+}
+
+.navUserl b {
+  font-size: 13px;
+  font-weight: 100 !important;
+  color: var(--accentclr);
+}
+
+.navUin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navUin span {
+  width: 12.6rem;
+  overflow: hidden;
+  text-wrap-mode: nowrap;
+  text-overflow: ellipsis;
+}
+
+.navUin b {
+  color: var(--accentclr);
+}
+
+
+/* ==========================================================================
+   3. Buttons, Toggles & Icons
+   ========================================================================== */
+
+.navToggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--xsradius);
+  margin-right: var(--xsradius);
+}
+
+.navToggle a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.55rem;
+  height: 1.2rem;
+  padding: var(--xsradius) var(--radius);
+  background: var(--neutralgrad);
+  border: 1px solid var(--accentclrop2);
+  border-radius: var(--sradius);
+  font-family: reddit sans condensed;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ntf_button-text {
+  display: flex;
+  align-items: center;
+}
+
+.ntf_button-text lord-icon, 
+.navUser lord-icon {
+  width: 15px;
+  height: 15px;
+  --lord-icon-primary: var(--accentclrdark);
+}
+
+.custMid lord-icon, 
+.custLeft lord-icon {
+  --lord-icon-primary: var(--accentclrdark);
+}
+
+
+/* ==========================================================================
+   4. Tooltips & Pseudo-elements
+   ========================================================================== */
+
+.nav-tooltip {
+  position: relative;
+}
+
+.nav-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  padding: var(--xsradius);
+  background: var(--neutraldark);
+  border: 1px solid var(--accentclrop);
+  border-radius: var(--sradius);
+  box-shadow: var(--shadowbox);
+  color: var(--accentclr);
+  font-family: reddit sans condensed;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition: .2s ease;
+}
+
+.nav-tooltip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* ==========================================================================
+   5. Interactive Elements & Animations
+   ========================================================================== */
+
+.homeIcon {
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-image: var(--logosmall);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center;
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+.homeIcon:hover {
+  transform: rotate(-12deg);
+}
