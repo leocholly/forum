@@ -1,0 +1,210 @@
+/* ==========================================================================
+   1. CORE CONTAINERS & WRAPPERS
+   ========================================================================== */
+.forum-paj-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 14rem;
+    margin: 0 auto;
+    font-family: geom;
+}
+
+.paj-track-wrapper {
+    overflow: hidden;
+    background: var(--neutralgrad);
+    border: 1px solid var(--accentclrop2);
+    border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   2. CONTROLS & NAVIGATION
+   ========================================================================== */
+.paj-btn {
+    position: absolute;
+    top: 25%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    font-size: 0.65rem;
+    color: var(--accentclr);
+    cursor: pointer;
+    background: var(--accentclrop2);
+    border: 1px solid var(--accentclrop2);
+    border-radius: var(--sradius);
+    box-shadow: var(--shadowbox);
+    transform: translateY(-50%);
+}
+
+.paj-btn:hover {
+    opacity: 0.9;
+}
+
+.paj-btn.prev { 
+    left: var(--radius); 
+}
+
+.paj-btn.next { 
+    right: var(--radius); 
+}
+
+/* ==========================================================================
+   3. CAROUSEL TRACK & SLIDES
+   ========================================================================== */
+.paj-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.paj-item {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: var(--lradius);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.paj-link-item {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: var(--sradius);
+    align-items: center;
+    justify-content: flex-start;
+    height: 11.7rem;
+    padding: 4rem;
+    background: var(--neutralgradop);
+}
+
+/* ==========================================================================
+   4. IMAGES, ICONS & MEDIA WRAPPERS
+   ========================================================================== */
+.paj-img {
+    width: 9rem;
+    height: 4.5rem;
+    margin-bottom: var(--radius);
+    object-fit: cover;
+    border: 1px solid var(--accentclrop);
+    border-radius: var(--sradius);
+}
+
+.paj-avatar-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.paj-group-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+    border-radius: 50%;
+}
+
+.paj-group-icon img {
+    width: 1rem;
+}
+
+/* ==========================================================================
+   5. TYPOGRAPHY & TEXT BLOCKS
+   ========================================================================== */
+.paj-meta {
+    width: 100%;
+    font-size: 12px;
+    line-height: 0.9rem;
+    color: var(--textcolor);
+}
+
+.paj-title {
+    display: flex;
+    align-items: center;
+    gap: var(--xsradius);
+    width: 100%;
+    margin-bottom: var(--radius);
+    font-family: reddit sans condensed;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    text-transform: uppercase;
+}
+
+.paj-title span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+}
+
+.paj-title::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--accentgrad);
+    opacity: 0.4;
+}
+
+.paj-row {
+    width: 100%;
+    height: 3.75rem;
+    padding: var(--sradius);
+    line-height: 0.75rem;
+    text-align: justify;
+    background: var(--neutralgrad);
+    border: 1px solid var(--accentclrop);
+    border-radius: var(--sradius);
+    box-shadow: var(--shadowbox);
+}  
+
+.paj-row span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accentclrdark);
+    text-transform: uppercase;
+}
+
+.paj-row a {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   6. BUTTON EXTENSIONS
+   ========================================================================== */
+.paj-all-btn {
+    position: relative;
+    top: -3rem;
+    left: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.8rem;
+    padding: var(--xsradius);
+    font-family: reddit sans condensed;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--neutralgrad);
+    border: 1px solid var(--accentclrop);
+    border-radius: 6px;
+    box-shadow: var(--shadowbox);
+    aspect-ratio: 1 / 1;
+    transition: opacity 0.2s;
+}
+
+.paj-all-btn:hover {
+    opacity: 0.9;
+}
