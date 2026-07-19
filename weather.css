@@ -1,0 +1,167 @@
+/* ==========================================================================
+   WEATHER MODULE (METEO)
+   ========================================================================== */
+
+.meteoWrapper {
+    display: inline-block;
+    height: fit-content;
+    padding: var(--radius);
+    background: var(--accentclrop2);
+    border: 1px solid var(--accentclrop2);
+    border-radius: var(--radius);
+    box-shadow: var(--shadowbox);
+}
+
+.headerMeteo {
+    position: relative;
+    width: 15rem;
+    height: 9rem;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.headerMeteo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url(https://2img.net/i.imgur.com/5to5DpM.png);
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.inMeteo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: var(--sradius);
+    background: var(--neutralgrad2);
+    transition: background 0.5s ease;
+}
+
+.inMeteo span {
+    display: flex;
+    align-items: center;
+    gap: var(--radius);
+    width: 100%;
+    padding: 0 var(--xsradius);
+    color: var(--accentclrdark);
+    font-family: reddit sans condensed;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+}
+
+.headerDegs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 5rem;
+    background: var(--accentmeteo);
+    border: 1px solid var(--accentclrop);
+    border-radius: var(--sradius);
+}
+
+.meteoDesc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.meteoDesc bb {
+    display: block;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.meteoDesc p {
+    margin: 0;
+    padding: var(--sradius);
+    line-height: 0.75rem;
+    text-align: justify;
+    text-align-last: justify;
+    color: var(--textcolor);
+    background: var(--neutralgrad);
+    border: 1px solid var(--accentclrop);
+    border-radius: var(--sradius);
+    box-shadow: var(--shadowbox);
+    font-family: geom;
+    font-size: 12px;
+}
+
+/* ==========================================================================
+   HOVER STATES & INTERACTION LOGIC
+   ========================================================================== */
+
+.headerMeteo:hover::before {
+    filter: blur(5px);
+    transform: scale(1.08); 
+}
+
+.headerMeteo:hover .inMeteo {
+    background: var(--neutralop); 
+}
+
+.headerMeteo:hover .headerDegs {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+}
+
+.headerMeteo:hover .meteoDesc {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   ALIGNMENT UTILITIES
+   ========================================================================== */
+
+.inRight {
+    text-align: right;
+}
+  
+.inRight::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--accentgrad);
+    opacity: 0.7;
+}
+  
+.inLeft::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--accentgrad);
+    opacity: 0.7;
+}
