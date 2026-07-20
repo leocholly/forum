@@ -1,4 +1,3 @@
-
 /* =========================
    FACECLAIM / BASIC TEXT
 ========================= */
@@ -9,9 +8,9 @@
   font-weight: 600;
 }
 .fc-faceclaim gg {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    margin-left: 0.3rem;
+    letter-spacing: 0.03rem;
 }
 
 .fc-occupation {
@@ -97,7 +96,7 @@
 .fc-gender { flex: 0 0 40px; text-align: center; }
 .fc-faceclaim { flex: 2; display: flex; flex-direction: column; }
 .fc-character { flex: 2; }
-.fc-player { flex: 1.5; }
+.fc-player, .fc-occupation {flex: 1.5;font-family: 'Geom';text-transform: none;font-size: 12px;font-weight: 500;}
 .fc-group { flex: 1.5; }
 .fc-occupation { flex: 2; }
 .fc-status { flex: 1.2; }
@@ -109,14 +108,18 @@
 .fc-status tt,
 .fc-status rr {
   background: var(--neutralgrad);
-  padding: 0.2rem;
+  padding: var(--xsradius) var(--sradius);
   border-radius: 0.3rem;
-  font-size: 0.6rem;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.05rem;
   color: var(--accentclr);
-  font-family: unset;
+  font-family: reddit sans condensed;
   border: 1px solid var(--accentclrop2);
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fc-status ll {
@@ -404,7 +407,10 @@
 .fc-group-duskwalkers a,
 .fc-group-terrafolks a,
 .fc-group-enti a {
-  transition: 0.2s ease;}
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  }
 
 .fc-group-bloomweavers a {color: var(--weaver);}
 .fc-group-wildkins a {color: var(--kin);}
@@ -442,8 +448,9 @@
 .fc-group-terrafolks a::before,
 .fc-group-enti a::before {
   content: '@';
-  color: var(--textcolor) !important;
+  color: var(--accentclrop);
   margin-right: 0.3rem;
+  font-size: 10px;
 }
 
 /* =========================
