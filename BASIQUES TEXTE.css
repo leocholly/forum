@@ -1,5 +1,10 @@
 /*-------- GROUPES (ROOT) ----------*/
 :root{
+
+--enti: #c3934e;
+--entiop:; rgba(195, 147, 78,0.5);
+--entioop: rgba(195, 147, 78,0.3);
+
 --weaver: #CF8399;
 --weaverop: rgba(207, 131, 153, 0.5);
 --weaveroop: rgba(207, 131, 153, 0.3);
@@ -27,8 +32,39 @@
 --warden: #864C89;
 --wardenop: rgba(134, 76, 137, 0.5);
 --wardenoop: rgba(134, 76, 137, 0.3);
+
+  /* radius sizes */
+
+    --xsradius: 0.2rem;
+    --sradius: 0.3rem;
+    --radius: 0.5rem; 
+    --lradius: 0.8rem;
+    --xlradius: 1rem; 
+  
+ /* GRADIENTS GÉNÉRAUX */
+  
+  /* ACCENTS */
+  --accentgrad: linear-gradient(60deg, var(--accentclrdark), var(--accentclr), var(--accentclrdarker));
+  --accentgradop: linear-gradient(60deg, var(--accentclrdarkop), var(--accentclrop), var(--accentclrdarkerop));
+  --accentgradop2: linear-gradient(60deg, var(--accentclrdarkop2), var(--accentclrop2), var(--accentclrdarkerop2));
+
+  --accentgrad2: linear-gradient(to top, var(--accentclr), var(--accentclrdarker));
+  --accentgrad2op: linear-gradient(to top, var(--accentclrop), var(--accentclrdarkerop));
+  --accentgrad2op2: linear-gradient(to top, var(--accentclrop2), var(--accentclrdarkerop2));
+
+  /* NEUTRES */
+  --neutralgrad: linear-gradient(to bottom, var(--neutral), var(--neutraldark), var(--neutraldarker));
+  
   
   /* GROUPES GRADIENTS (BOTTIN) */ 
+--entigradoop: linear-gradient(
+    to right,
+    var(--entioop),
+    var(--neutraldark),
+    var(--neutraldark),
+    var(--neutraldark)
+);
+  
 --bloomgradoop: linear-gradient(
     to right,
     var(--weaveroop),
@@ -92,7 +128,10 @@
     var(--neutraldark),
     var(--neutraldark)
 );
+
   }
+
+
 /*-------- CLASSES DE BASE ---------*/
 
 .weaver, weaver { color: var(--weaver);}
@@ -108,6 +147,8 @@
 .dusk, dusk {color: var(--dusk);}
 
 .warden, warden {color: var(--warden);}
+
+.enti, enti {color: var(--enti);}
   
 /*--------- OPACITÉS ---------*/  
   
@@ -125,7 +166,9 @@
 .duskop, duskop {color: var(--duskop);}
 
 .wardenop, wardenop {color: var(--wardenop);}
-  
+
+.entiop, entiop {color:var(--entiop);}
+
   /* 0.3 */ 
  
 .weaveroop, weaveroop {color: var(--weaveroop);}
@@ -141,3 +184,6 @@
 .duskoop, duskoop {color: var(--duskoop);}
 
 .wardenoop, wardenoop {color: var(--wardenoop);}
+
+.entioop, entioop {color:var(--entioop);}
+
