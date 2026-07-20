@@ -410,6 +410,7 @@
   transition: 0.2s ease;
   display: flex;
   align-items: center;
+  width: fit-content;
   }
 
 .fc-group-bloomweavers a {color: var(--weaver);}
