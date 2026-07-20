@@ -2,8 +2,8 @@
 :root{
 
 --enti: #c3934e;
---entiop:; rgba(195, 147, 78,0.5);
---entioop: rgba(195, 147, 78,0.3);
+--entiop: rgba(195, 147, 78, 0.5);
+--entioop: rgba(195, 147, 78, 0.3);
 
 --weaver: #CF8399;
 --weaverop: rgba(207, 131, 153, 0.5);
