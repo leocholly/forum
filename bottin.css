@@ -373,7 +373,7 @@
 .fc-group-citizens:hover { background: var(--citigradoop); }
 .fc-group-duskwalkers:hover { background: var(--duskgradoop); }
 .fc-group-terrafolks:hover { background: var(--terragradoop); }
-.fc-group-enti:hover { background: var(--terragradoop); }
+.fc-group-enti:hover { background: var(--entigradoop); }
 
 .fc-group-bloomweavers:hover,
 .fc-group-wildkins:hover,
