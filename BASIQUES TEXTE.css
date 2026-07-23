@@ -214,9 +214,38 @@ mplus {font-family: "M PLUS Rounded 1c", sans-serif;}
 dongle{font-family: "Dongle", sans-serif;}
 
 
+/*--------- STYLES DE TEXTES ---------*/
+
+bb{
+  font-weight:700;
+  background:var(--accentclr);
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+b{font-weight:500;}
+
+u{
+  text-decoration: none;
+  border-bottom: 1px solid var(--accentclr);
+}
 
 
 /*--------- BOUTONS, TAGS ---------*/  
+
+  /*highlights*/
+
+hl {
+    background: var(--accentgrad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+hl2 {
+    background: var(--accentgrad2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
   /* tags accent, neutre catégories */
 
