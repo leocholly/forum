@@ -189,7 +189,16 @@
 
 /*--------- POLICES ---------*/
 
-  /* KR */
+subrayada{font-family: montserrat subrayada;}
+pacifico{font-family:pacifico;}
+reddit{font-family:'reddit sans condensed';}
+teachers{font-family:teachers;}  
+tiltneon{font-family:'tilt neon';}
+ubunmono{font-family:'ubuntu sans mono';}
+ubunsans{font-family:'ubuntu sans';}
+work{font-family:'work sans';}
+
+/* KR */
 
 nanumps {font-family: "Nanum Pen Script", cursive;}
 nanumg {font-family: "Nanum Gothic", sans-serif;}
@@ -201,7 +210,8 @@ bhsans {font-family: "Black Han Sans", sans-serif;}
 dohyeon {font-family: "Do Hyeon", sans-serif;}
 gowun {font-family: "Gowun Dodum", sans-serif;}
 poorstory {font-family: "Poor Story", cursive;}
-mplus {font-family: "M PLUS Rounded 1c", sans-serif;}          
+mplus {font-family: "M PLUS Rounded 1c", sans-serif;}      
+dongle{font-family: "Dongle", sans-serif;}
 
 
 
