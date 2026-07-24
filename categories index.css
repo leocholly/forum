@@ -4,7 +4,7 @@
     background: var(--accentclrop2);
     border-radius: var(--radius);
     padding: var(--radius);
-    margin-bottom: 25px;
+    margin-bottom: var(--lradius);
     border: 1px solid var(--accentclrop2);
     box-shadow: var(--shadowbox);
 }
