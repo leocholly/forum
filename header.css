@@ -97,6 +97,19 @@ div#page-header {
     border: 1px solid var(--accentclrop);
 }
 
+.inPls {
+    background: var(--neutralgradop);
+    height: 100%;
+    width: 100%;
+    padding: var(--sradius);
+    border-radius: var(--radius);
+    line-height: 0.9rem;
+    border: 1px solid var(--accentclrop2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--xsradius);
+}
+
 .inTxt {
     width: 100%;
     background: var(--neutralgrad);
