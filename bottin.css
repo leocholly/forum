@@ -35,7 +35,7 @@
 .fc-container {
   display: flex;
   flex-direction: column;
-  background: var(--neutraldark);
+  background: var(--accentgradop2);
   padding: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadowbox);
@@ -52,13 +52,12 @@
 
 .fc-header {
   font-weight: 500;
-  background: var(--accentgradop2);
-  padding: 0.5rem;
-  margin-bottom: 0.3rem;
-  font-size: 0.9rem;
-  color: var(--contrastlight);
-  border-radius: 0.4rem 0.4rem 0 0;
-  font-family: 'Geom';
+  background: var(--neutraldarkop);
+  padding: var(--radius);
+  margin-bottom: var(--radius);
+  border-radius: var(--radius);
+  border: 1px solid var(--accentclrdarkop2);
+  box-shadow: var(--shadowbox);
 }
 
 .fc-header div {
@@ -67,8 +66,11 @@
 }
 
 .fc-row {
-  padding: 0.3rem;
-  background: var(--neutraldark);
+  padding: var(--sradius);
+  background: var(--neutraldarker);
+  border-radius: var(--sradius);
+  border: 1px solid var(--accentclrdarkop2);
+  box-shadow: var(--shadowbox);
 }
 
 .fc-row:hover {
@@ -80,13 +82,15 @@
 ========================= */
 
 .fc-rows {
-  background: var(--neutral);
-  padding: 0.3rem;
-  border-radius: 0.2rem;
+  background: var(--neutraldarkerop);
+  padding: var(--radius);
+  border-radius: var(--radius);
   box-shadow: var(--shadowbox);
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: var(--sradius);
+  border: 1px solid var(--accentclrdarkop2);
+  box-shadow: var(--shadowbox);
 }
 
 /* =========================
@@ -345,15 +349,10 @@
    RULES BLOCK
 ========================= */
 
-.fc-rules-wrapper {
-  background: var(--neutraldark);
-  padding: 0.4rem;
-  border-radius: 0.3rem;
-  margin-bottom: 0.5rem;
-}
+.fc-rules-wrapper {background: var(--accentgradop2);padding: var(--radius);border-radius: var(--radius);margin-bottom: var(--xlradius);}
 
 .fc-rules-inner {
-  background: var(--neutralop);
+  background: var(--neutraldarkerop3);
   padding: var(--lradius) var(--xlradius);
   border-radius: var(--radius);
   border: 1px solid var(--accentclrdarkop2);
@@ -367,16 +366,7 @@
    FOOTER
 ========================= */
 
-.fc-footer {
-  font-weight: 800;
-  background: var(--accentgradop2);
-  padding: 0.4rem 0;
-  margin-top: 0.3rem;
-  font-size: 0.9rem;
-  color: var(--contrastlight);
-  border-radius: 0 0 0.3rem 0.3rem;
-  height: 32px;
-}
+.fc-footer {font-weight: 500;background: var(--neutraldarkop);padding: var(--radius);margin-top: var(--radius);border-radius: var(--radius);border: 1px solid var(--accentclrdarkop2);box-shadow: var(--shadowbox);}
 
 /* =========================
    GROUP HOVER + THEMES
@@ -541,6 +531,7 @@ input#fcSearchInput {
     font-family: var(--font2);
     font-size: 14px;
     text-transform: lowercase;
+    background: var(--neutraldarkerop3);
 }
 
 .fc-search-wrapper {
@@ -549,17 +540,10 @@ input#fcSearchInput {
     align-items: center;
     justify-content: space-between;
     background: var(--accentgradop2);
-    padding: var(--radius);
+    padding: var(--sradius);
     border-radius: var(--radius);
     border: 1px solid var(--accentclrdarkop2);
 }
 
 .fc-search-wrapper::before {
-    content: 'effectuer une recherche';
-    color: var(--accentclr);
-    font-size: 12px;
-    text-transform: uppercase;
-    font-family: var(--font2);
-    font-weight: 600;
-    letter-spacing: 0.03rem;
 }
