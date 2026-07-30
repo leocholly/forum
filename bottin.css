@@ -240,12 +240,12 @@
   background: var(--accentgradop2);
   border-radius: var(--radius);
   border: 1px solid var(--accentclrdarkop2);
-  padding: var(--sradius);
+  padding: var(--xsradius);
   font-weight: 500;
   display: flex;
   align-items: center;
-  box-shadow: var(--shadowbox);
-  text-transform: uppercase;
+  box-shadow: var(
+  --shadowbox);
 }
 
 /* variants */
