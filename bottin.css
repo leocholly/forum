@@ -16,7 +16,17 @@
 .fc-occupation {
   text-transform: lowercase;
 }
-
+bbb {
+    background: var(--accentgrad2op2);
+    padding: 0.2rem var(--radius);
+    border-radius: var(--sradius);
+    border: 1px solid var(--accentclrdarkop2);
+    box-shadow: var(--shadowbox);
+    font-family: var(--font2);
+    font-weight: 600;
+    font-size: 11px;
+    color: var(--accentclr);
+}
 
 /* =========================
    GROUP BASE STYLES
@@ -204,7 +214,7 @@
   gap: var(--radius);
   width: 100%;
   height: 40rem;
-  background: var(--neutraldarkerop);
+  background: var(--neutraldarkop);
   padding: var(--lradius);
   border-radius: var(--radius);
   box-shadow: var(--shadowbox);
@@ -237,14 +247,15 @@
 }
 
 .fc-stat-line {
-  background: var(--accentgradop2);
+  background: var(--neutraldark);
   border-radius: var(--radius);
   border: 1px solid var(--accentclrdarkop2);
-  padding: var(--xsradius);
   font-weight: 500;
   display: flex;
   align-items: center;
   box-shadow: var(--shadowbox);
+  gap: var(--xlradius);
+  padding: var(--sradius);
 }
 
 /* variants */
@@ -278,12 +289,8 @@
 .fc-stat-wrap {
   display: flex;
   flex-direction: column;
-  gap: var(--sradius);
-  background: var(--neutralop2);
-  padding: var(--radius);
-  border-radius: var(--radius);
+  gap: var(--radius);
   height: 100%;
-  box-shadow: var(--shadowbox);
 }
 
 /* =========================
@@ -302,6 +309,7 @@
   flex: 0 0 auto;
   margin: 0;
   white-space: nowrap;
+  padding-right: var(--xlradius);
 }
 
 .fc-stat-wrap.fc-stat-wrap-scroll {
