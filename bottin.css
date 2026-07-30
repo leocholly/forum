@@ -165,7 +165,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
+  background: var(--neutraldarkerop3);
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -177,10 +177,10 @@
 
 .fc-modal-inner {
   width: 60rem;
-  border-radius: 0.3rem;
+  border-radius: var(--radius);
   position: relative;
-  background: var(--accentgradop);
-  padding: 0.8rem;
+  background: var(--accentclrop2);
+  padding: var(--lradius);
   box-shadow: var(--shadowbox);
 }
 
@@ -216,7 +216,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  background: var(--neutraldark);
+  background: var(--neutraldarkerop3);
   box-shadow: var(--shadowbox);
 }
 
@@ -235,16 +235,13 @@
 }
 
 .fc-stat-line {
-  background: var(--accentgradop2);
-  border-radius: 0.3rem;
-  border: 1px solid var(--accentclrop2);
-  padding: 0.2rem;
-  text-transform: uppercase;
-  font-weight: 600;
+  background: var(--neutralop);
+  border-radius: var(--radius);
+  border: 1px solid var(--accentclrdarkop2);
+  padding: var(--sradius);
+  font-weight: 500;
   display: flex;
   align-items: center;
-  border-left: 3px solid var(--accentclrop);
-  border-right: 3px solid var(--accentclrop);
 }
 
 /* variants */
@@ -292,7 +289,7 @@
 
 .fc-stats-layout {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--lradius);
   width: 100%;
   align-items: stretch;
 }
