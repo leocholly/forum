@@ -532,3 +532,34 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+input#fcSearchInput {
+    width: 50%;
+    border: 1px solid var(--accentclrdarkop2);
+    box-shadow: var(--shadowbox);
+    padding: var(--sradius);
+    font-family: var(--font2);
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+.fc-search-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--accentgradop2);
+    padding: var(--radius);
+    border-radius: var(--radius);
+    border: 1px solid var(--accentclrdarkop2);
+}
+
+.fc-search-wrapper::before {
+    content: 'effectuer une recherche';
+    color: var(--accentclr);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: var(--font2);
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+}
