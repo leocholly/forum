@@ -16,17 +16,7 @@
 .fc-occupation {
   text-transform: lowercase;
 }
-bbb {
-    background: var(--accentgrad2op2);
-    padding: 0.2rem var(--radius);
-    border-radius: var(--sradius);
-    border: 1px solid var(--accentclrdarkop2);
-    box-shadow: var(--shadowbox);
-    font-family: var(--font2);
-    font-weight: 600;
-    font-size: 11px;
-    color: var(--accentclr);
-}
+
 
 /* =========================
    GROUP BASE STYLES
@@ -150,14 +140,14 @@ bbb {
 
 .fc-stats-btn {
   background: var(--neutralgrad);
-  padding: 0.2rem;
-  border-radius: 0.3rem;
-  font-size: 0.7rem;
+  padding: var(--sradius) var(--lradius);
+  border-radius: var(--sradius);
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.15rem;
-  color: var(--accentclr);
-  font-family: 'Geom';
-  border: 1px solid var(--accentclrop2);
+  letter-spacing: 0.03rem;
+  color: var(--accentclrdark);
+  font-family: var(--font2);
+  border: 1px solid var(--accentclrdarkop2);
   text-transform: uppercase;
   opacity: 0.9;
   transition: all ease 0.3s;
@@ -214,7 +204,7 @@ bbb {
   gap: var(--radius);
   width: 100%;
   height: 40rem;
-  background: var(--neutraldarkop);
+  background: var(--neutraldarkerop);
   padding: var(--lradius);
   border-radius: var(--radius);
   box-shadow: var(--shadowbox);
@@ -247,15 +237,14 @@ bbb {
 }
 
 .fc-stat-line {
-  background: var(--neutraldark);
+  background: var(--accentgradop2);
   border-radius: var(--radius);
   border: 1px solid var(--accentclrdarkop2);
+  padding: var(--xsradius);
   font-weight: 500;
   display: flex;
   align-items: center;
   box-shadow: var(--shadowbox);
-  gap: var(--xlradius);
-  padding: var(--sradius);
 }
 
 /* variants */
@@ -289,8 +278,12 @@ bbb {
 .fc-stat-wrap {
   display: flex;
   flex-direction: column;
-  gap: var(--radius);
+  gap: var(--sradius);
+  background: var(--neutralop2);
+  padding: var(--radius);
+  border-radius: var(--radius);
   height: 100%;
+  box-shadow: var(--shadowbox);
 }
 
 /* =========================
@@ -309,7 +302,6 @@ bbb {
   flex: 0 0 auto;
   margin: 0;
   white-space: nowrap;
-  padding-right: var(--xlradius);
 }
 
 .fc-stat-wrap.fc-stat-wrap-scroll {
@@ -361,12 +353,14 @@ bbb {
 }
 
 .fc-rules-inner {
-  background: var(--neutral);
-  padding: 1rem;
-  border-radius: 0.3rem;
-  border: 1px solid var(--neutraldarkeroop);
-  font-family: montserrat;
-  font-weight: 450;
+  background: var(--neutralop);
+  padding: var(--lradius) var(--xlradius);
+  border-radius: var(--radius);
+  border: 1px solid var(--accentclrdarkop2);
+  font-family: var(--font1);
+  font-weight: 400;
+  font-size: 14px;
+  box-shadow: var(--shadowbox);
 }
 
 /* =========================
