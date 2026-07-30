@@ -244,8 +244,7 @@
   font-weight: 500;
   display: flex;
   align-items: center;
-  box-shadow: var(
-  --shadowbox);
+  box-shadow: var(--shadowbox);
 }
 
 /* variants */
@@ -285,6 +284,29 @@
   border-radius: var(--radius);
   height: 100%;
   box-shadow: var(--shadowbox);
+}
+
+/* =========================
+   STAT TAGS & SCROLL ADJUSTMENTS
+========================= */
+
+.fc-stat-wrap.fc-stat-wrap-tags {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.4rem;
+}
+
+.fc-stat-line.fc-stat-tag {
+  width: fit-content;
+  flex: 0 0 auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.fc-stat-wrap.fc-stat-wrap-scroll {
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 /* =========================
@@ -384,20 +406,6 @@
 .fc-group-terrafolks:hover { background: var(--terragradoop); }
 .fc-group-enti:hover { background: var(--entigradoop); }
 
-.fc-group-bloomweavers:hover,
-.fc-group-wildkins:hover,
-.fc-group-tideborns:hover,
-.fc-group-wanderers:hover,
-.fc-group-veilwardens:hover,
-.fc-group-pyrebornes:hover,
-.fc-group-kinwovens:hover,
-.fc-group-citizens:hover,
-.fc-group-duskwalkers:hover,
-.fc-group-terrafolks:hover,
-.fc-group-enti:hover {
-  transition: 0.2s ease;
-}
-
 /* =========================
    GROUP LINKS
 ========================= */
@@ -417,7 +425,7 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  }
+}
 
 .fc-group-bloomweavers a {color: var(--weaver);}
 .fc-group-wildkins a {color: var(--kin);}
@@ -428,7 +436,6 @@
 .fc-group-terrafolks a {color: var(--terra);}
 .fc-group-enti a {color: var(--enti);}
 
-/* hover + prefix shared */
 .fc-group-kinwovens a:hover,
 .fc-group-citizens a:hover,
 .fc-group-bloomweavers a:hover,
