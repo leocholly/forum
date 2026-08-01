@@ -285,7 +285,7 @@ a.forumtitle:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10rem;
+    width: 7.5rem;
     border-radius: var(--radius) 0 0 var(--radius);
     border-right: 2px solid var(--accentclrdarkerop2);
 }
@@ -393,12 +393,17 @@ a.forumtitle:hover {
 }
 
 .lastmsgr a.gensmall::before {
-    content: 'par ';
+    content: '(';
+    color: var(--textcolor);
+}
+
+.lastmsgr a.gensmall::after {
+    content: ')';
     color: var(--textcolor);
 }
 
 .lastmsgr accentclr {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 }
 
